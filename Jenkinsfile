@@ -5,7 +5,7 @@ pipeline {
 		stage ("build & SonarQube Analysis") {
 			agent any
 			steps {
-				withSonarQubeEnv("sonar_server") {
+				withSonarQubeEnv("jenkins-todolist") {
 					sh 'mvn clean package sonar:sonar'
 				}
 			}
