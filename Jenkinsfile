@@ -3,7 +3,7 @@ pipeline {
 	environment {
 		//variaveis de ambiente
 		VIRTUALENV_NAME = 'venv-django-todolist'
-		scanner_home = tool name: 'SonarScanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
+		SCANNER_HOME = tool name: 'SonarScanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
 	}
 	stages {
 		stage('Checkout') {
