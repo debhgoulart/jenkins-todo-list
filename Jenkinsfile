@@ -38,7 +38,7 @@ pipeline {
 						${SCANNER_HOME}/bin/sonar-scanner \
 						-Dsonar.projectKey=jenkins-todolist \
 						-Dsonar.sources=. \
-						-Dsonar.python.version=2.7.17 \
+						-Dsonar.python.version=3.6.9 \
 						-Dsonar.sourceEncoding=UTF-8
 					'''
 				}
@@ -47,7 +47,9 @@ pipeline {
 	}
 	post {
 		always {
-			cleanWs()
+			node {
+				cleanWs()
+			}
 		}
 	}
 }
