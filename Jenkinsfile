@@ -1,6 +1,6 @@
 pipeline {
 	agent any
-	enviroment {
+	environment {
 		//variaveis de ambiente
 		VIRTUALENV_NAME = 'venv-django-todolist'
 		scanner_home = tool name: 'SonarScanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
